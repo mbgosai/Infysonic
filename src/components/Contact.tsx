@@ -168,6 +168,17 @@ export default function Contact() {
                   className="space-y-5 relative z-10"
                   onSubmit={handleSubmit}
                 >
+                  {/* Form Error Message */}
+                  {formState === 'error' && (
+                    <motion.div 
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="p-4 rounded-xl bg-red-50 border border-red-100 text-red-600 text-sm font-semibold text-center mb-4"
+                    >
+                      Something went wrong. Please check your configuration or try again later.
+                    </motion.div>
+                  )}
+
                   <div className="grid md:grid-cols-2 gap-5">
                     {/* Name Field with Floating Label */}
                     <div className="relative">
