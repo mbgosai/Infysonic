@@ -39,19 +39,35 @@ export default function Contact() {
     
     setFormState('submitting');
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setFormState('success');
-    
-    // Reset after showing success
-    setTimeout(() => {
-      setFormState('idle');
-      setName('');
-      setEmail('');
-      setMessage('');
-      setSelectedService('');
-    }, 3000);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          service_requested: selectedService,
+          message
+        })
+      });
+
+      if (res.ok) {
+        setFormState('success');
+        setTimeout(() => {
+          setFormState('idle');
+          setName('');
+          setEmail('');
+          setMessage('');
+          setSelectedService('');
+        }, 3000);
+      } else {
+        console.error('Failed to submit form');
+        setFormState('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setFormState('error');
+    }
   };
 
   const contactInfo = [
