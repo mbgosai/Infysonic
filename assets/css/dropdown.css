@@ -1,0 +1,136 @@
+/* ========================================================
+   INFYSONIC DROPDOWN — TIGHT POSITIONING
+   Desktop: appears DIRECTLY under the "Services" nav link
+   ======================================================== */
+
+.dropdown {
+  position: relative;
+  z-index: 60;
+}
+
+/* Desktop dropdown: appears RIGHT under the link with ZERO gap */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 520px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  z-index: 99999;
+  padding: 14px 12px;
+  margin-top: 0 !important;   /* ← ZERO gap — this fixes "way below" */
+  overflow: visible;
+}
+
+/* Desktop hover */
+@media (min-width: 768px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Mobile open state (JS) */
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown content */
+.dropdown-menu .dropdown-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.dropdown-menu .section-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #64748b;
+  padding: 6px 12px 4px;
+  margin-bottom: 2px;
+}
+
+.dropdown-menu .section {
+  padding: 4px 0;
+}
+
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  font-size: 0.875rem;
+  color: #334155;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.15s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #f8fafc;
+  color: #0f172a;
+  transform: translateX(2px);
+}
+
+.dropdown-menu a i {
+  width: 18px;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* Mobile dropdown sizing */
+@media (max-width: 767px) {
+  .dropdown-menu {
+    width: 100%;
+    max-width: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+  }
+  .dropdown-menu .dropdown-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================================
+   MOBILE HAMBURGER MENU
+   ======================================================== */
+
+#mobile-menu {
+  display: none;
+  background: white;
+  border-top: 1px solid #e2e8f0;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+#mobile-menu.open {
+  display: block;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 14px 20px;
+  color: #334155;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.mobile-nav-link:hover {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.mobile-section-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #64748b;
+  padding: 8px 20px 4px;
+  background: #f8fafc;
+}

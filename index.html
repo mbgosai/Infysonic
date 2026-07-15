@@ -1,15 +1,910 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <meta name="description" content="Infysonic is a premier US-based IT consulting and software development company located in Massachusetts, delivering scalable digital solutions." />
-    <title>Infysonic | Enterprise IT & Software Development Services</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infysonic | Enterprise IT &amp; AI Solutions</title>
+    <meta name="description" content="Infysonic delivers enterprise AI solutions, software development, cloud services and ERP systems. Trusted by 150+ companies worldwide.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --primary: #3b82f6;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', system_ui, sans-serif;
+            font-weight: 600;
+        }
 
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+
+        .nav-link {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #3b82f6;
+            transform: translateY(-1px);
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        .section-header {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -.025em;
+        }
+
+        .stat-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .tech-badge {
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .tech-badge:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 15px -3px rgb(59 130 246 / 0.2);
+        }
+
+        /* Animated Tech Marquee */
+        .tech-marquee {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .tech-track {
+            display: flex;
+            animation: marquee 25s linear infinite;
+        }
+        
+        .tech-track:hover {
+            animation-play-state: paused;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .tech-item {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            margin-right: 1.25rem;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+        
+        .tech-icon {
+            width: 22px;
+            height: 22px;
+            margin-right: 0.65rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modern-card {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 10px 15px -3px rgb(15 23 42 / 0.1), 0 4px 6px -4px rgb(15 23 42 / 0.1);
+        }
+
+        .modern-card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .logo-container img {
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .nav-scrolled {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            background-color: rgba(255,255,255,0.98);
+            backdrop-filter: blur(12px);
+        }
+
+        .animated-gradient {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #3b82f6);
+            background-size: 200% 100%;
+            animation: gradient-shift 3s ease infinite;
+        }
+
+        .metric-value {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .wave {
+            animation: wave 2.5s ease infinite;
+        }
+
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        .footer-link {
+            transition: color .2s ease;
+        }
+        
+        .footer-link:hover {
+            color: #3b82f6;
+        }</style>
+  <link rel="stylesheet" href="assets/css/dropdown.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <!-- Navbar -->
+    <nav id="navbar" class="bg-white border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="px-8 py-5 flex items-center justify-between">
+                <div class="flex items-center gap-x-3">
+                    <!-- Logo -->
+                    <a href="index.html" class="logo-container flex items-center gap-x-2">
+                        <img src="assets/images/logo.png" alt="Infysonic" class="h-12 w-auto" style="max-height:48px; display:block; object-fit:contain;"><span class="font-display text-3xl font-semibold tracking-tighter bg-gradient-to-r from-[#04a1e8] via-[#0ea5e9] to-[#00d4ff] bg-clip-text text-transparent">Infysonic</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-x-8 text-sm">
+                    <a href="index.html" class="nav-link font-medium text-slate-700">Home</a>
+                    <div class="dropdown relative">
+                        <a href="services.html" class="nav-link font-medium text-slate-700 flex items-center gap-x-1">
+                            Services <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <div class="section">
+                                    <div class="section-title">AI Solutions</div>
+                                    <a href="services/ai-strategy-consulting.html"><i class="fas fa-lightbulb"></i> AI Strategy Consulting</a>
+                                    <a href="services/generative-ai-solutions.html"><i class="fas fa-magic"></i> Generative AI Solutions</a>
+                                    <a href="services/ai-agent-development.html"><i class="fas fa-robot"></i> AI Agent Development</a>
+                                    <a href="services/llm-integration.html"><i class="fas fa-language"></i> LLM Integration</a>
+                                    <a href="services/rag-solutions.html"><i class="fas fa-database"></i> RAG Solutions</a>
+                                    <a href="services/ai-chatbots.html"><i class="fas fa-comments"></i> AI Chatbots</a>
+                                    <a href="services/predictive-analytics.html"><i class="fas fa-chart-line"></i> Predictive Analytics</a>
+                                    <a href="services/intelligent-document-processing.html"><i class="fas fa-file-alt"></i> Document AI</a>
+                                </div>
+                                <div class="section">
+                                    <div class="section-title">Development Services</div>
+                                    <a href="services/web-development.html"><i class="fas fa-globe"></i> Web Development</a>
+                                    <a href="services/cloud-solutions.html"><i class="fas fa-cloud"></i> Cloud &amp; DevOps</a>
+                                    <a href="services/mobile-development.html"><i class="fas fa-mobile-alt"></i> Mobile Apps</a>
+                                    <a href="services/ui-ux-design.html"><i class="fas fa-palette"></i> UI/UX Design</a>
+                                    <a href="services/ecommerce.html"><i class="fas fa-shopping-cart"></i> E-Commerce</a>
+                                    <a href="services/erp-solutions.html"><i class="fas fa-cogs"></i> ERP Solutions</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html#why-us" class="nav-link font-medium text-slate-700">Why Us</a>
+                    <a href="contact.html" class="nav-link font-medium text-slate-700">Contact</a>
+                </div>
+                
+                <div class="flex items-center gap-x-3">
+                    <a href="contact.html" 
+                       class="hidden sm:flex items-center px-5 py-2.5 text-sm font-semibold rounded-2xl border border-slate-300 hover:bg-slate-100 transition-colors">
+                        <span>Get in touch</span>
+                    </a>
+                    
+                    <a href="contact.html" 
+                       class="px-6 py-2.5 text-sm font-semibold bg-slate-900 text-white rounded-2xl flex items-center gap-x-2 hover:bg-slate-800 transition-all shadow-sm">
+                        <span>Start Project</span>
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                    
+                    <div class="md:hidden">
+                        <button id="mobile-menu-btn"
+                                class="w-10 h-10 flex items-center justify-center text-slate-600 hover:bg-slate-100 rounded-2xl transition-colors">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden border-t border-slate-100 bg-white">
+            <div class="px-4 py-4 space-y-1">
+                <a href="index.html" class="mobile-nav-link block">Home</a>
+                
+                <!-- Mobile Services (simple list for now) -->
+                <div class="mobile-section-title">Services</div>
+                <a href="services/ai-strategy-consulting.html" class="mobile-nav-link block pl-6">AI Strategy Consulting</a>
+                <a href="services/generative-ai-solutions.html" class="mobile-nav-link block pl-6">Generative AI Solutions</a>
+                <a href="services/ai-agent-development.html" class="mobile-nav-link block pl-6">AI Agent Development</a>
+                <a href="services/llm-integration.html" class="mobile-nav-link block pl-6">LLM Integration</a>
+                <a href="services/rag-solutions.html" class="mobile-nav-link block pl-6">RAG Solutions</a>
+                <a href="services/ai-chatbots.html" class="mobile-nav-link block pl-6">AI Chatbots</a>
+                <a href="services/predictive-analytics.html" class="mobile-nav-link block pl-6">Predictive Analytics</a>
+                <a href="services/intelligent-document-processing.html" class="mobile-nav-link block pl-6">Document AI</a>
+                <a href="services/web-development.html" class="mobile-nav-link block pl-6">Web Development</a>
+                <a href="services/cloud-solutions.html" class="mobile-nav-link block pl-6">Cloud &amp; DevOps</a>
+                <a href="services/mobile-development.html" class="mobile-nav-link block pl-6">Mobile Apps</a>
+                <a href="services/ui-ux-design.html" class="mobile-nav-link block pl-6">UI/UX Design</a>
+                <a href="services/ecommerce.html" class="mobile-nav-link block pl-6">E-Commerce</a>
+                <a href="services/erp-solutions.html" class="mobile-nav-link block pl-6">ERP Solutions</a>
+
+                <a href="index.html#why-us" class="mobile-nav-link block">Why Us</a>
+                <a href="contact.html" class="mobile-nav-link block">Contact</a>
+
+                <div class="pt-3 flex flex-col gap-2 px-4">
+                    <a href="contact.html" class="px-5 py-2.5 text-sm font-semibold rounded-2xl border border-slate-300 hover:bg-slate-100 text-center">Get in touch</a>
+                    <a href="contact.html" class="px-5 py-2.5 text-sm font-semibold bg-slate-900 text-white rounded-2xl text-center">Start Project</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Clean Light Banner (matching reference) -->
+    <header class="bg-gradient-to-b from-[#f0f8ff] via-[#f8fafc] to-[#F8FAFC] pt-16 pb-24 relative overflow-hidden">
+        <div class="max-w-screen-xl mx-auto px-8">
+            <div class="max-w-3xl mx-auto text-center relative z-10">
+                <h1 class="text-5xl md:text-[56px] font-display font-semibold tracking-tighter leading-[1.05] text-slate-900 mb-5">
+                    Your Technology Partner For Innovative<br>Digital Solutions
+                </h1>
+                
+                <p class="max-w-lg mx-auto text-lg text-slate-600 mb-8">
+                    We help you to expand your business &amp; grow your business by leveraging the latest technologies.
+                </p>
+                
+                <div class="flex justify-center">
+                    <a href="contact.html" 
+                       class="inline-flex items-center justify-center px-8 h-12 border border-slate-900 hover:bg-slate-900 hover:text-white transition-all text-slate-900 font-semibold rounded-2xl text-base">
+                        Contact Our Experts <span class="ml-2">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating images on the sides (matching reference style: clean professional photos) -->
+        <div class="absolute inset-0 pointer-events-none hidden xl:block">
+            <!-- Left side floating photos -->
+            <img src="assets/images/hero/team-collaborate.jpg" class="absolute top-[6%] left-[1%] w-[162px] h-[118px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Professional team collaboration">
+            <img src="assets/images/hero/woman-glasses.jpg" class="absolute top-[28%] left-[7%] w-[128px] h-[108px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Business professional">
+            <img src="assets/images/hero/collaborate-desk.jpg" class="absolute top-[52%] left-[2%] w-[115px] h-[138px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Office collaboration">
+
+            <!-- Right side floating photos -->
+            <img src="assets/images/hero/team-laptop.jpg" class="absolute top-[7%] right-[2%] w-[155px] h-[118px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Team working on laptop">
+            <img src="assets/images/hero/business-man.jpg" class="absolute top-[30%] right-[8%] w-[128px] h-[145px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Business professional">
+            <img src="assets/images/hero/woman-tablet.jpg" class="absolute top-[55%] right-[1%] w-[135px] h-[105px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Woman with tablet">
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <div class="max-w-screen-xl mx-auto px-8 -mt-6 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white shadow rounded-3xl p-2 border border-slate-100">
+            <div class="stat-card p-5 flex items-center gap-4 rounded-3xl">
+                <div class="flex-shrink-0 w-11 h-11 flex items-center justify-center bg-blue-100 text-blue-600 rounded-2xl">
+                    <i class="fas fa-calendar-alt text-xl"></i>
+                </div>
+                <div>
+                    <div class="font-display text-4xl font-semibold metric-value">12+</div>
+                    <div class="text-sm text-slate-500 font-medium">Years Experience</div>
+                </div>
+            </div>
+            <div class="stat-card p-5 flex items-center gap-4 rounded-3xl">
+                <div class="flex-shrink-0 w-11 h-11 flex items-center justify-center bg-emerald-100 text-emerald-600 rounded-2xl">
+                    <i class="fas fa-rocket text-xl"></i>
+                </div>
+                <div>
+                    <div class="font-display text-4xl font-semibold metric-value">80+</div>
+                    <div class="text-sm text-slate-500 font-medium">Projects Delivered</div>
+                </div>
+            </div>
+            <div class="stat-card p-5 flex items-center gap-4 rounded-3xl">
+                <div class="flex-shrink-0 w-11 h-11 flex items-center justify-center bg-purple-100 text-purple-600 rounded-2xl">
+                    <i class="fas fa-smile text-xl"></i>
+                </div>
+                <div>
+                    <div class="font-display text-4xl font-semibold metric-value">99%</div>
+                    <div class="text-sm text-slate-500 font-medium">Client Satisfaction</div>
+                </div>
+            </div>
+            <div class="stat-card p-5 flex items-center gap-4 rounded-3xl">
+                <div class="flex-shrink-0 w-11 h-11 flex items-center justify-center bg-orange-100 text-orange-600 rounded-2xl">
+                    <i class="fas fa-headset text-xl"></i>
+                </div>
+                <div>
+                    <div class="font-display text-4xl font-semibold metric-value">24/7</div>
+                    <div class="text-sm text-slate-500 font-medium">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Expertise -->
+    <div class="max-w-screen-xl mx-auto px-8 pt-16 pb-8">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-10">
+            <div>
+                <span class="px-3 py-1.5 text-xs font-semibold tracking-widest bg-blue-100 text-blue-700 rounded-full">OUR EXPERTISE</span>
+                <h2 class="section-header mt-3">Comprehensive Solutions</h2>
+                <p class="text-lg text-slate-600 max-w-md mt-1">End-to-end AI and software development services tailored for enterprise growth and innovation.</p>
+            </div>
+            <div class="mt-5 lg:mt-0">
+                <a href="services.html" class="inline-flex items-center font-semibold text-blue-600 hover:text-blue-700 text-sm">
+                    View All Services <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- AI Solutions -->
+        <div class="mb-9">
+            <div class="flex items-center mb-5">
+                <div class="px-3.5 py-1 text-xs font-bold tracking-wider bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center">
+                    <i class="fas fa-brain mr-2"></i> 
+                    <span>AI SOLUTIONS</span>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- AI Cards -->
+                <a href="services/ai-strategy-consulting.html" class="service-card bg-white border border-slate-200 rounded-3xl p-5 group">
+                    <div class="service-icon w-9 h-9 flex items-center justify-center bg-blue-100 text-blue-600 rounded-2xl mb-4">
+                        <i class="fas fa-lightbulb text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg group-hover:text-blue-600 transition-colors">AI Strategy</h4>
+                    <p class="text-sm text-slate-600 mt-1">Transform your business with intelligent AI roadmaps</p>
+                </a>
+                
+                <a href="services/generative-ai-solutions.html" class="service-card bg-white border border-slate-200 rounded-3xl p-5 group">
+                    <div class="service-icon w-9 h-9 flex items-center justify-center bg-purple-100 text-purple-600 rounded-2xl mb-4">
+                        <i class="fas fa-magic text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg group-hover:text-blue-600 transition-colors">Generative AI</h4>
+                    <p class="text-sm text-slate-600 mt-1">Harness the power of generative AI for innovation</p>
+                </a>
+                
+                <a href="services/ai-agent-development.html" class="service-card bg-white border border-slate-200 rounded-3xl p-5 group">
+                    <div class="service-icon w-9 h-9 flex items-center justify-center bg-violet-100 text-violet-600 rounded-2xl mb-4">
+                        <i class="fas fa-robot text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg group-hover:text-blue-600 transition-colors">AI Agents</h4>
+                    <p class="text-sm text-slate-600 mt-1">Build autonomous AI agents that work for you</p>
+                </a>
+                
+                <a href="services/llm-integration.html" class="service-card bg-white border border-slate-200 rounded-3xl p-5 group">
+                    <div class="service-icon w-9 h-9 flex items-center justify-center bg-sky-100 text-sky-600 rounded-2xl mb-4">
+                        <i class="fas fa-language text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg group-hover:text-blue-600 transition-colors">LLM Integration</h4>
+                    <p class="text-sm text-slate-600 mt-1">Embed powerful language AI into your applications</p>
+                </a>
+                
+                <a href="services/rag-solutions.html" class="service-card bg-white border border-slate-200 rounded-3xl p-5 group">
+                    <div class="service-icon w-9 h-9 flex items-center justify-center bg-teal-100 text-teal-600 rounded-2xl mb-4">
+                        <i class="fas fa-database text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg group-hover:text-blue-600 transition-colors">RAG Solutions</h4>
+                    <p class="text-sm text-slate-600 mt-1">Ground AI responses in your enterprise knowledge</p>
+                </a>
+                
+                <a href="services/ai-chatbots.html" class="service-card bg-white border border-slate-200 rounded-3xl p-5 group">
+                    <div class="service-icon w-9 h-9 flex items-center justify-center bg-indigo-100 text-indigo-600 rounded-2xl mb-4">
+                        <i class="fas fa-comments text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg group-hover:text-blue-600 transition-colors">AI Chatbots</h4>
+                    <p class="text-sm text-slate-600 mt-1">Intelligent conversational AI for every channel</p>
+                </a>
+                
+                <a href="services/predictive-analytics.html" class="service-card bg-white border border-slate-200 rounded-3xl p-5 group">
+                    <div class="service-icon w-9 h-9 flex items-center justify-center bg-amber-100 text-amber-600 rounded-2xl mb-4">
+                        <i class="fas fa-chart-line text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg group-hover:text-blue-600 transition-colors">Predictive Analytics</h4>
+                    <p class="text-sm text-slate-600 mt-1">Turn data into foresight with ML-powered predictions</p>
+                </a>
+                
+                <a href="services/intelligent-document-processing.html" class="service-card bg-white border border-slate-200 rounded-3xl p-5 group">
+                    <div class="service-icon w-9 h-9 flex items-center justify-center bg-emerald-100 text-emerald-600 rounded-2xl mb-4">
+                        <i class="fas fa-file-alt text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg group-hover:text-blue-600 transition-colors">Document AI</h4>
+                    <p class="text-sm text-slate-600 mt-1">Extract intelligence from documents at scale</p>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Development Services -->
+        <div>
+            <div class="flex items-center mb-5">
+                <div class="px-3.5 py-1 text-xs font-bold tracking-wider bg-gradient-to-r from-slate-700 to-slate-900 text-white rounded-full flex items-center">
+                    <i class="fas fa-laptop-code mr-2"></i> 
+                    <span>DEVELOPMENT SERVICES</span>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <a href="services/web-development.html" class="service-card bg-white border border-slate-200 rounded-3xl p-5 group">
+                    <div class="service-icon w-9 h-9 flex items-center justify-center bg-blue-100 text-blue-600 rounded-2xl mb-4">
+                        <i class="fas fa-globe text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg group-hover:text-blue-600 transition-colors">Web Development</h4>
+                    <p class="text-sm text-slate-600 mt-1">Enterprise-grade web solutions built for scale</p>
+                </a>
+                
+                <a href="services/cloud-solutions.html" class="service-card bg-white border border-slate-200 rounded-3xl p-5 group">
+                    <div class="service-icon w-9 h-9 flex items-center justify-center bg-sky-100 text-sky-600 rounded-2xl mb-4">
+                        <i class="fas fa-cloud text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg group-hover:text-blue-600 transition-colors">Cloud &amp; DevOps</h4>
+                    <p class="text-sm text-slate-600 mt-1">Scale infinitely with cloud-native architecture</p>
+                </a>
+                
+                <a href="services/mobile-development.html" class="service-card bg-white border border-slate-200 rounded-3xl p-5 group">
+                    <div class="service-icon w-9 h-9 flex items-center justify-center bg-violet-100 text-violet-600 rounded-2xl mb-4">
+                        <i class="fas fa-mobile-alt text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg group-hover:text-blue-600 transition-colors">Mobile Apps</h4>
+                    <p class="text-sm text-slate-600 mt-1">Native experiences on every device</p>
+                </a>
+                
+                <a href="services/ui-ux-design.html" class="service-card bg-white border border-slate-200 rounded-3xl p-5 group">
+                    <div class="service-icon w-9 h-9 flex items-center justify-center bg-pink-100 text-pink-600 rounded-2xl mb-4">
+                        <i class="fas fa-palette text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg group-hover:text-blue-600 transition-colors">UI/UX Design</h4>
+                    <p class="text-sm text-slate-600 mt-1">Design that delights and converts</p>
+                </a>
+                
+                <a href="services/ecommerce.html" class="service-card bg-white border border-slate-200 rounded-3xl p-5 group">
+                    <div class="service-icon w-9 h-9 flex items-center justify-center bg-emerald-100 text-emerald-600 rounded-2xl mb-4">
+                        <i class="fas fa-shopping-cart text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg group-hover:text-blue-600 transition-colors">E-Commerce</h4>
+                    <p class="text-sm text-slate-600 mt-1">Commerce platforms that convert</p>
+                </a>
+                
+                <a href="services/erp-solutions.html" class="service-card bg-white border border-slate-200 rounded-3xl p-5 group">
+                    <div class="service-icon w-9 h-9 flex items-center justify-center bg-emerald-100 text-emerald-600 rounded-2xl mb-4">
+                        <i class="fas fa-cogs text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg group-hover:text-blue-600 transition-colors">ERP Solutions</h4>
+                    <p class="text-sm text-slate-600 mt-1">Unified enterprise systems for operations</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technologies We Use - Animated -->
+    <div class="max-w-screen-xl mx-auto px-8 pt-8 pb-12">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+            <div>
+                <h2 class="font-display text-3xl font-semibold">Technologies We Use</h2>
+                <p class="text-slate-600 mt-1">Cutting-edge tools powering our solutions. Continuously evolving.</p>
+            </div>
+            <div class="mt-2 md:mt-0">
+                <a href="services.html" class="text-sm font-semibold flex items-center text-blue-600 hover:text-blue-700">See full tech stack <i class="fas fa-arrow-right ml-1.5 text-xs"></i></a>
+            </div>
+        </div>
+        
+        <!-- Animated Tech Marquee -->
+        <div class="tech-marquee bg-white border border-slate-200 shadow-sm rounded-3xl p-2 overflow-hidden">
+            <div class="tech-track flex items-center">
+                <!-- First set -->
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-python text-[#3776AB]"></i></div>Python</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-react text-[#61DAFB]"></i></div>React</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-node-js text-[#339933]"></i></div>Node.js</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-aws text-[#FF9900]"></i></div>AWS</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-docker text-[#2496ED]"></i></div>Docker</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fas fa-database text-[#4479A1]"></i></div>PostgreSQL</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-google text-[#4285F4]"></i></div>Google Cloud</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fas fa-brain text-[#FF6F00]"></i></div>TensorFlow</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fas fa-robot text-[#00A0DC]"></i></div>LangChain</div>
+                
+                <!-- Duplicate for seamless loop -->
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-python text-[#3776AB]"></i></div>Python</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-react text-[#61DAFB]"></i></div>React</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-node-js text-[#339933]"></i></div>Node.js</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-aws text-[#FF9900]"></i></div>AWS</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-docker text-[#2496ED]"></i></div>Docker</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fas fa-database text-[#4479A1]"></i></div>PostgreSQL</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-google text-[#4285F4]"></i></div>Google Cloud</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fas fa-brain text-[#FF6F00]"></i></div>TensorFlow</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fas fa-robot text-[#00A0DC]"></i></div>LangChain</div>
+            </div>
+        </div>
+        
+        <!-- Second row -->
+        <div class="mt-2 tech-marquee bg-white border border-slate-200 shadow-sm rounded-3xl p-2 overflow-hidden" style="animation-delay: -8s;">
+            <div class="tech-track flex items-center" style="animation: marquee 30s linear infinite;">
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-microsoft text-[#00A4EF]"></i></div>Azure</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fas fa-server text-[#E94F37]"></i></div>Kubernetes</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-js text-[#F7DF1E]"></i></div>JavaScript</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fas fa-chart-bar text-[#FF6600]"></i></div>Apache Spark</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fas fa-robot text-[#00C7FD]"></i></div>OpenAI</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-git-alt text-[#F05032]"></i></div>Git</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fas fa-cube text-[#4B8BBE]"></i></div>Next.js</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-angular text-[#DD0031]"></i></div>Angular</div>
+                
+                <!-- Duplicate -->
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-microsoft text-[#00A4EF]"></i></div>Azure</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fas fa-server text-[#E94F37]"></i></div>Kubernetes</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-js text-[#F7DF1E]"></i></div>JavaScript</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fas fa-chart-bar text-[#FF6600]"></i></div>Apache Spark</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fas fa-robot text-[#00C7FD]"></i></div>OpenAI</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-git-alt text-[#F05032]"></i></div>Git</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fas fa-cube text-[#4B8BBE]"></i></div>Next.js</div>
+                <div class="tech-item"><div class="tech-icon"><i class="fab fa-angular text-[#DD0031]"></i></div>Angular</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us -->
+    <div id="why-us" class="max-w-screen-xl mx-auto px-8 pt-5 pb-16">
+        <div class="text-center mb-10">
+            <h2 class="section-header">Why Choose Infysonic</h2>
+            <p class="text-lg text-slate-600 mt-2 max-w-md mx-auto">We don't just build software; we build the foundation for your digital success.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="modern-card bg-white border border-slate-100 p-6 rounded-3xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-bolt text-emerald-600 text-3xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-display text-4xl font-semibold">2x</div>
+                        <div class="font-semibold">Faster</div>
+                    </div>
+                </div>
+                <h4 class="font-semibold text-lg">Fast Delivery</h4>
+                <p class="text-slate-600 text-sm mt-1">Agile methodology ensures rapid, iterative delivery without compromising quality.</p>
+            </div>
+            
+            <div class="modern-card bg-white border border-slate-100 p-6 rounded-3xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-globe text-blue-600 text-3xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-display text-4xl font-semibold">99.9%</div>
+                        <div class="font-semibold">Uptime</div>
+                    </div>
+                </div>
+                <h4 class="font-semibold text-lg">Scalable Solutions</h4>
+                <p class="text-slate-600 text-sm mt-1">Architecture designed to grow with your business from day one.</p>
+            </div>
+            
+            <div class="modern-card bg-white border border-slate-100 p-6 rounded-3xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-dollar-sign text-amber-600 text-3xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-display text-4xl font-semibold">40%</div>
+                        <div class="font-semibold">Savings</div>
+                    </div>
+                </div>
+                <h4 class="font-semibold text-lg">Cost Effective</h4>
+                <p class="text-slate-600 text-sm mt-1">Premium solutions at competitive rates with transparent pricing.</p>
+            </div>
+            
+            <div class="modern-card bg-white border border-slate-100 p-6 rounded-3xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-100 flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-microchip text-purple-600 text-3xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-display text-4xl font-semibold">100+</div>
+                        <div class="font-semibold">Technologies</div>
+                    </div>
+                </div>
+                <h4 class="font-semibold text-lg">Modern Tech</h4>
+                <p class="text-slate-600 text-sm mt-1">Cutting-edge technologies and best practices in every project.</p>
+            </div>
+            
+            <div class="modern-card bg-white border border-slate-100 p-6 rounded-3xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-teal-100 flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-headset text-teal-600 text-3xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-display text-4xl font-semibold">24/7</div>
+                        <div class="font-semibold">Support</div>
+                    </div>
+                </div>
+                <h4 class="font-semibold text-lg">24/7 Support</h4>
+                <p class="text-slate-600 text-sm mt-1">Dedicated support team available around the clock.</p>
+            </div>
+            
+            <div class="modern-card bg-white border border-slate-100 p-6 rounded-3xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-100 flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-globe text-rose-600 text-3xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-display text-4xl font-semibold">15+</div>
+                        <div class="font-semibold">Countries</div>
+                    </div>
+                </div>
+                <h4 class="font-semibold text-lg">Global Expertise</h4>
+                <p class="text-slate-600 text-sm mt-1">World-class talent delivering enterprise solutions.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="max-w-screen-xl mx-auto px-8 pb-12">
+        <div class="bg-white border border-slate-100 shadow-sm rounded-3xl p-9">
+            <div class="mb-8">
+                <span class="font-semibold text-sm tracking-wider text-slate-500">TRUSTED BY LEADERS</span>
+                <h2 class="font-display text-3xl font-semibold mt-1">Real results from real companies.</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <div class="flex gap-x-1 text-amber-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed">"Infysonic transformed our vision into reality. Their team delivered our AI platform ahead of schedule with exceptional quality."</p>
+                    <div class="flex items-center mt-5">
+                        <div class="w-9 h-9 bg-slate-200 rounded-full overflow-hidden">
+                            <img src="https://i.pravatar.cc/36?img=28" alt="Sarah Johnson">
+                        </div>
+                        <div class="ml-3">
+                            <div class="font-semibold">Sarah Johnson</div>
+                            <div class="text-sm text-slate-500">CEO, TechFlow</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="flex gap-x-1 text-amber-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed">"The e-commerce solution doubled our conversion rate. Their attention to detail and technical expertise is unmatched."</p>
+                    <div class="flex items-center mt-5">
+                        <div class="w-9 h-9 bg-slate-200 rounded-full overflow-hidden">
+                            <img src="https://i.pravatar.cc/36?img=47" alt="Michael Chen">
+                        </div>
+                        <div class="ml-3">
+                            <div class="font-semibold">Michael Chen</div>
+                            <div class="text-sm text-slate-500">Founder, EcoShop</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="flex gap-x-1 text-amber-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed">"Working with Infysonic was a game-changer. They built a scalable infrastructure that perfectly handles our growth."</p>
+                    <div class="flex items-center mt-5">
+                        <div class="w-9 h-9 bg-slate-200 rounded-full overflow-hidden">
+                            <img src="https://i.pravatar.cc/36?img=32" alt="Elena Rodriguez">
+                        </div>
+                        <div class="ml-3">
+                            <div class="font-semibold">Elena Rodriguez</div>
+                            <div class="text-sm text-slate-500">CTO, HealthLink</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="max-w-screen-xl mx-auto px-8 pb-16">
+        <div class="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-10 lg:p-14 text-white">
+            <div class="max-w-xl">
+                <h2 class="font-display text-4xl font-semibold tracking-tight">Ready to Transform Your Business?</h2>
+                <p class="mt-3 text-slate-300 text-lg">Let's discuss how our AI and software solutions can drive your success.</p>
+                
+                <div class="mt-7 flex flex-wrap gap-x-3">
+                    <a href="contact.html" class="inline-flex items-center px-8 h-[52px] bg-white text-slate-900 font-bold rounded-3xl hover:bg-slate-100 transition-colors">
+                        Contact Us Today
+                    </a>
+                    <a href="services.html" class="inline-flex items-center px-8 h-[52px] border border-white/30 hover:bg-white/10 text-white font-semibold rounded-3xl transition-colors">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 py-12">
+  <div class="max-w-screen-xl mx-auto px-8">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-10">
+      
+      <!-- Logo + Tagline -->
+      <div class="md:col-span-4">
+        <div class="flex items-center gap-x-2 mb-4">
+          <img src="assets/images/logo.png" alt="Infysonic" class="h-9 w-auto" style="max-height:36px; display:block; object-fit:contain;">
+          <span class="font-display text-2xl font-bold tracking-[-1px] bg-gradient-to-r from-[#04a1e8] via-[#0ea5e9] to-[#00d4ff] bg-clip-text text-transparent">INFYSONIC</span>
+        </div>
+        <p class="text-slate-500 text-sm leading-relaxed max-w-[260px]">
+          Empowering the next generation of industry leaders with modern, scalable, and cost-effective digital solutions.
+        </p>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="md:col-span-3">
+        <div class="font-semibold text-xs tracking-[1.5px] text-slate-900 mb-4">SERVICES</div>
+        <div class="space-y-[7px] text-sm">
+          <a href="services/web-development.html" class="block text-slate-600 hover:text-slate-900">Web &amp; Application Development</a>
+          <a href="services/ecommerce.html" class="block text-slate-600 hover:text-slate-900">E-Commerce Solutions</a>
+          <a href="services/cloud-solutions.html" class="block text-slate-600 hover:text-slate-900">Cloud &amp; DevOps</a>
+          <a href="services/ui-ux-design.html" class="block text-slate-600 hover:text-slate-900">UI/UX Design</a>
+          <a href="services/mobile-development.html" class="block text-slate-600 hover:text-slate-900">Mobile App Development</a>
+          <a href="services/erp-solutions.html" class="block text-slate-600 hover:text-slate-900">ERP Solutions</a>
+          <a href="services/ai-strategy-consulting.html" class="block text-slate-600 hover:text-slate-900">AI Strategy Consulting</a>
+          <a href="services/generative-ai-solutions.html" class="block text-slate-600 hover:text-slate-900">Generative AI Solutions</a>
+          <a href="services/ai-agent-development.html" class="block text-slate-600 hover:text-slate-900">AI Agent Development</a>
+          <a href="services/llm-integration.html" class="block text-slate-600 hover:text-slate-900">LLM Integration</a>
+          <a href="services/rag-solutions.html" class="block text-slate-600 hover:text-slate-900">RAG Solutions</a>
+          <a href="services/ai-chatbots.html" class="block text-slate-600 hover:text-slate-900">AI Chatbots</a>
+          <a href="services/predictive-analytics.html" class="block text-slate-600 hover:text-slate-900">Predictive Analytics</a>
+          <a href="services/intelligent-document-processing.html" class="block text-slate-600 hover:text-slate-900">Document AI</a>
+        </div>
+      </div>
+
+      <!-- COMPANY -->
+      <div class="md:col-span-2">
+        <div class="font-semibold text-xs tracking-[1.5px] text-slate-900 mb-4">COMPANY</div>
+        <div class="space-y-[7px] text-sm">
+          <a href="index.html" class="block text-slate-600 hover:text-slate-900">Home</a>
+          <a href="index.html#why-us" class="block text-slate-600 hover:text-slate-900">How We Work</a>
+          <a href="index.html" class="block text-slate-600 hover:text-slate-900">About Us</a>
+          <a href="contact.html" class="block text-slate-600 hover:text-slate-900">Contact</a>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="md:col-span-3">
+        <div class="font-semibold text-xs tracking-[1.5px] text-slate-900 mb-4">CONTACT</div>
+        <div class="space-y-3 text-sm">
+          <div class="flex items-start gap-3">
+            <div class="mt-0.5 text-slate-400"><i class="fas fa-map-marker-alt w-4"></i></div>
+            <div class="text-slate-600">Medway, Massachusetts, USA</div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="mt-0.5 text-slate-400"><i class="fas fa-envelope w-4"></i></div>
+            <a href="mailto:hello@infysonic.com" class="text-slate-600 hover:text-[#04a1e8]">hello@infysonic.com</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+
+<script>
+(function() {
+  function initDropdowns() {
+    document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      if (!menu) return;
+      const trigger = dropdown.querySelector('a');
+      if (!trigger) return;
+
+      // Remove previous listeners
+      const newTrigger = trigger.cloneNode(true);
+      trigger.parentNode.replaceChild(newTrigger, trigger);
+
+      // Only use click behavior on mobile (desktop uses pure CSS hover)
+      newTrigger.addEventListener('click', function(e) {
+        const isMobile = window.innerWidth < 768;
+        
+        if (isMobile) {
+          e.preventDefault();
+          
+          // close other dropdowns
+          document.querySelectorAll('.dropdown').forEach(d => {
+            if (d !== dropdown) d.classList.remove('open');
+          });
+          
+          dropdown.classList.toggle('open');
+        }
+        // On desktop (>767px) we do NOTHING here — hover is handled 100% by CSS
+      });
+
+      // Close on outside click (works on both mobile and desktop)
+      document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('open');
+        }
+      });
+
+      // Always allow links inside menu to work normally
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          dropdown.classList.remove('open');
+        });
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDropdowns);
+  } else {
+    initDropdowns();
+  }
+  window.addEventListener('load', initDropdowns);
+
+  // Extra safety: if window is resized from mobile to desktop, clean up open state
+  window.addEventListener('resize', function() {
+    if (window.innerWidth >= 768) {
+      document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+    }
+  });
+
+  // Mobile hamburger menu
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('open');
+      const icon = mobileBtn.querySelector('i');
+      if (icon) {
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
