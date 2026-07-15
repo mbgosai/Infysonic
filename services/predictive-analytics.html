@@ -67,9 +67,47 @@
                 </div>
                 <div class="flex items-center gap-x-3">
                     <a href="../contact.html" class="px-6 py-2.5 text-sm font-semibold bg-slate-900 text-white rounded-2xl flex items-center gap-x-2 hover:bg-slate-800 transition-all">Start Project</a>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-btn"
+                                class="w-10 h-10 flex items-center justify-center text-slate-600 hover:bg-slate-100 rounded-2xl transition-colors">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+</div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden border-t border-slate-100 bg-white">
+            <div class="px-4 py-4 space-y-1">
+                <a href="../index.html" class="mobile-nav-link block">Home</a>
+                
+                <div class="mobile-section-title">Services</div>
+                <a href="../services/ai-strategy-consulting.html" class="mobile-nav-link block pl-6">AI Strategy Consulting</a>
+                <a href="../services/generative-ai-solutions.html" class="mobile-nav-link block pl-6">Generative AI Solutions</a>
+                <a href="../services/ai-agent-development.html" class="mobile-nav-link block pl-6">AI Agent Development</a>
+                <a href="../services/llm-integration.html" class="mobile-nav-link block pl-6">LLM Integration</a>
+                <a href="../services/rag-solutions.html" class="mobile-nav-link block pl-6">RAG Solutions</a>
+                <a href="../services/ai-chatbots.html" class="mobile-nav-link block pl-6">AI Chatbots</a>
+                <a href="../services/predictive-analytics.html" class="mobile-nav-link block pl-6">Predictive Analytics</a>
+                <a href="../services/intelligent-document-processing.html" class="mobile-nav-link block pl-6">Document AI</a>
+                <a href="../services/web-development.html" class="mobile-nav-link block pl-6">Web Development</a>
+                <a href="../services/cloud-solutions.html" class="mobile-nav-link block pl-6">Cloud &amp; DevOps</a>
+                <a href="../services/mobile-development.html" class="mobile-nav-link block pl-6">Mobile Apps</a>
+                <a href="../services/ui-ux-design.html" class="mobile-nav-link block pl-6">UI/UX Design</a>
+                <a href="../services/ecommerce.html" class="mobile-nav-link block pl-6">E-Commerce</a>
+                <a href="../services/erp-solutions.html" class="mobile-nav-link block pl-6">ERP Solutions</a>
+
+                <a href="../index.html#why-us" class="mobile-nav-link block">Why Us</a>
+                <a href="../contact.html" class="mobile-nav-link block">Contact</a>
+
+                <div class="pt-3 flex flex-col gap-2 px-4">
+                    <a href="../contact.html" class="px-5 py-2.5 text-sm font-semibold rounded-2xl border border-slate-300 hover:bg-slate-100 text-center">Get in touch</a>
+                    <a href="../contact.html" class="px-5 py-2.5 text-sm font-semibold bg-slate-900 text-white rounded-2xl text-center">Start Project</a>
                 </div>
             </div>
         </div>
+
     </nav>
 
     <div class="modern-banner text-white pt-16 pb-16">
@@ -441,6 +479,20 @@
     }
   });
 })();
+
+  // Mobile hamburger toggle
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('open');
+      const icon = mobileBtn.querySelector('i');
+      if (icon) {
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+      }
+    });
+  }
 </script>
 </body>
 </html>
