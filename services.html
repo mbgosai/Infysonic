@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://infysonic.com/services.html">
     <title>Services | Infysonic</title>
     <meta name="description" content="Explore Infysonic's full range of AI automation, web development, mobile apps, cloud & DevOps, UI/UX, and ERP solutions for enterprises.">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -109,6 +110,24 @@
             color: #3b82f6;
         }</style>
   <link rel="stylesheet" href="assets/css/dropdown.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Infysonic",
+  "url": "https://infysonic.com",
+  "logo": "https://infysonic.com/assets/images/logo.png",
+  "description": "Infysonic delivers enterprise AI solutions, software development, cloud services and ERP systems.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Medway",
+    "addressRegion": "Massachusetts",
+    "addressCountry": "US"
+  }
+}
+    </script>
 </head>
 <body class="bg-slate-50 text-slate-800">
     <!-- Navbar -->
@@ -159,19 +178,19 @@
                 
                 <div class="flex items-center gap-x-3">
                     <a href="contact.html" 
-                       class="hidden sm:flex items-center px-5 py-2.5 text-sm font-semibold rounded-2xl border border-slate-300 hover:bg-slate-100 transition-colors">
+                       class="hidden sm:flex items-center px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold rounded-2xl border border-slate-300 hover:bg-slate-100 transition-colors">
                         <span>Get in touch</span>
                     </a>
                     
                     <a href="contact.html" 
-                       class="px-6 py-2.5 text-sm font-semibold bg-slate-900 text-white rounded-2xl flex items-center gap-x-2 hover:bg-slate-800 transition-all shadow-sm">
+                       class="px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold bg-slate-900 text-white rounded-2xl flex items-center gap-x-1.5 sm:gap-x-2 hover:bg-slate-800 transition-all shadow-sm">
                         <span>Start Project</span>
                         <i class="fas fa-arrow-right text-xs"></i>
                     </a>
                     
                     <div class="md:hidden">
                         <button id="mobile-menu-btn"
-                                class="w-10 h-10 flex items-center justify-center text-slate-600 hover:bg-slate-100 rounded-2xl transition-colors">
+                                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-slate-600 hover:bg-slate-100 rounded-2xl transition-colors">
                             <i class="fas fa-bars text-xl"></i>
                         </button>
                     </div>
@@ -209,25 +228,27 @@
 
     </nav>
 
-    <!-- Services Header Banner (updated layout) -->
-    <div class="modern-banner text-white pt-14 pb-16">
+    <!-- Hero Section - Consistent with index.html -->
+    <header class="bg-gradient-to-b from-[#f0f8ff] via-[#f8fafc] to-[#F8FAFC] pt-16 pb-24 relative overflow-hidden">
         <div class="max-w-screen-xl mx-auto px-8">
-            <div class="max-w-2xl">
-                <div class="inline-flex items-center gap-x-2 bg-white/10 text-xs font-semibold px-4 py-1.5 rounded-3xl mb-6 border border-white/20">
-                    <i class="fas fa-layer-group"></i> 
-                    <span>COMPREHENSIVE OFFERINGS</span>
-                </div>
+            <div class="max-w-3xl mx-auto text-center relative z-10">
+                <h1 class="text-3xl sm:text-5xl md:text-[56px] font-display font-semibold tracking-tighter leading-[1.05] text-slate-900 mb-5 break-words">
+                    Engineering Intelligence.<br class="hidden sm:block">Empowering Tomorrow.
+                </h1>
                 
-                <h1 class="font-display text-6xl font-semibold tracking-tighter leading-none mb-4">Our Services</h1>
-                <p class="text-xl text-slate-300 max-w-md">End-to-end AI and software development solutions tailored for enterprise growth and innovation.</p>
+                <p class="max-w-lg mx-auto text-lg mb-8">
+                    We build AI-powered software, intelligent automation, cloud platforms, and enterprise solutions that help businesses innovate, scale, and stay ahead.
+                </p>
                 
-                <div class="mt-8 flex items-center gap-3">
-                    <a href="#ai-solutions" class="inline-flex px-5 h-11 items-center justify-center text-sm font-semibold border border-white/40 hover:bg-white/10 transition-colors rounded-2xl">AI Solutions</a>
-                    <a href="#development" class="inline-flex px-5 h-11 items-center justify-center text-sm font-semibold bg-white text-slate-900 rounded-2xl">Development Services</a>
+                <div class="flex justify-center">
+                    <a href="contact.html" 
+                       class="inline-flex items-center justify-center px-8 h-12 border border-slate-900 hover:bg-slate-900 hover:text-white transition-all text-slate-900 font-semibold rounded-2xl text-base">
+                        Start Your Project <span class="ml-2">→</span>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
     <div class="max-w-screen-xl mx-auto px-8 pt-12">
         <!-- AI Solutions Section -->
@@ -236,13 +257,13 @@
                 <div class="flex-shrink-0">
                     <span class="inline-block px-3 py-1.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold rounded-2xl px-4">AI SOLUTIONS</span>
                 </div>
-                <h2 class="ml-4 font-display text-3xl font-semibold">Intelligent Solutions</h2>
+                <h2 class="ml-4 font-display text-2xl sm:text-3xl font-semibold">Intelligent Solutions</h2>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
                 <a href="services/ai-strategy-consulting.html" class="service-card group bg-white border border-slate-200 p-6 rounded-3xl">
                     <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-blue-100 text-blue-600 mb-4"><i class="fas fa-lightbulb text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition-colors">AI Strategy Consulting</h3>
+                    <h3 class="font-semibold text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">AI Strategy Consulting</h3>
                     <p class="text-sm text-slate-600">Transform your business with intelligent AI roadmaps and strategic planning.</p>
                     <div class="mt-5 flex items-center text-xs font-semibold text-blue-600 group-hover:gap-x-2 transition-all">
                         <span>Learn more</span> <i class="fas fa-arrow-right ml-1.5"></i>
@@ -251,7 +272,7 @@
                 
                 <a href="services/generative-ai-solutions.html" class="service-card group bg-white border border-slate-200 p-6 rounded-3xl">
                     <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-purple-100 text-purple-600 mb-4"><i class="fas fa-magic text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition-colors">Generative AI Solutions</h3>
+                    <h3 class="font-semibold text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">Generative AI Solutions</h3>
                     <p class="text-sm text-slate-600">Harness the power of generative AI for innovation and automation.</p>
                     <div class="mt-5 flex items-center text-xs font-semibold text-blue-600 group-hover:gap-x-2 transition-all">
                         <span>Learn more</span> <i class="fas fa-arrow-right ml-1.5"></i>
@@ -260,7 +281,7 @@
                 
                 <a href="services/ai-agent-development.html" class="service-card group bg-white border border-slate-200 p-6 rounded-3xl">
                     <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-violet-100 text-violet-600 mb-4"><i class="fas fa-robot text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition-colors">AI Agent Development</h3>
+                    <h3 class="font-semibold text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">AI Agent Development</h3>
                     <p class="text-sm text-slate-600">Build autonomous AI agents that work for you 24/7.</p>
                     <div class="mt-5 flex items-center text-xs font-semibold text-blue-600 group-hover:gap-x-2 transition-all">
                         <span>Learn more</span> <i class="fas fa-arrow-right ml-1.5"></i>
@@ -269,7 +290,7 @@
                 
                 <a href="services/llm-integration.html" class="service-card group bg-white border border-slate-200 p-6 rounded-3xl">
                     <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-sky-100 text-sky-600 mb-4"><i class="fas fa-language text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition-colors">LLM Integration</h3>
+                    <h3 class="font-semibold text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">LLM Integration</h3>
                     <p class="text-sm text-slate-600">Embed powerful language AI into your applications.</p>
                     <div class="mt-5 flex items-center text-xs font-semibold text-blue-600 group-hover:gap-x-2 transition-all">
                         <span>Learn more</span> <i class="fas fa-arrow-right ml-1.5"></i>
@@ -278,7 +299,7 @@
                 
                 <a href="services/rag-solutions.html" class="service-card group bg-white border border-slate-200 p-6 rounded-3xl">
                     <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-teal-100 text-teal-600 mb-4"><i class="fas fa-database text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition-colors">RAG Solutions</h3>
+                    <h3 class="font-semibold text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">RAG Solutions</h3>
                     <p class="text-sm text-slate-600">Ground AI responses in your enterprise knowledge base.</p>
                     <div class="mt-5 flex items-center text-xs font-semibold text-blue-600 group-hover:gap-x-2 transition-all">
                         <span>Learn more</span> <i class="fas fa-arrow-right ml-1.5"></i>
@@ -287,7 +308,7 @@
                 
                 <a href="services/ai-chatbots.html" class="service-card group bg-white border border-slate-200 p-6 rounded-3xl">
                     <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-indigo-100 text-indigo-600 mb-4"><i class="fas fa-comments text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition-colors">AI Chatbots</h3>
+                    <h3 class="font-semibold text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">AI Chatbots</h3>
                     <p class="text-sm text-slate-600">Intelligent conversational AI for every channel.</p>
                     <div class="mt-5 flex items-center text-xs font-semibold text-blue-600 group-hover:gap-x-2 transition-all">
                         <span>Learn more</span> <i class="fas fa-arrow-right ml-1.5"></i>
@@ -296,7 +317,7 @@
                 
                 <a href="services/predictive-analytics.html" class="service-card group bg-white border border-slate-200 p-6 rounded-3xl">
                     <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-amber-100 text-amber-600 mb-4"><i class="fas fa-chart-line text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition-colors">Predictive Analytics</h3>
+                    <h3 class="font-semibold text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">Predictive Analytics</h3>
                     <p class="text-sm text-slate-600">Turn data into foresight with ML-powered predictions.</p>
                     <div class="mt-5 flex items-center text-xs font-semibold text-blue-600 group-hover:gap-x-2 transition-all">
                         <span>Learn more</span> <i class="fas fa-arrow-right ml-1.5"></i>
@@ -305,7 +326,7 @@
                 
                 <a href="services/intelligent-document-processing.html" class="service-card group bg-white border border-slate-200 p-6 rounded-3xl">
                     <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-emerald-100 text-emerald-600 mb-4"><i class="fas fa-file-alt text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition-colors">Document AI</h3>
+                    <h3 class="font-semibold text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">Document AI</h3>
                     <p class="text-sm text-slate-600">Extract intelligence from documents at scale.</p>
                     <div class="mt-5 flex items-center text-xs font-semibold text-blue-600 group-hover:gap-x-2 transition-all">
                         <span>Learn more</span> <i class="fas fa-arrow-right ml-1.5"></i>
@@ -320,13 +341,13 @@
                 <div class="flex-shrink-0">
                     <span class="inline-block px-3 py-1.5 bg-gradient-to-r from-slate-700 to-slate-900 text-white text-xs font-bold rounded-2xl px-4">DEVELOPMENT SERVICES</span>
                 </div>
-                <h2 class="ml-4 font-display text-3xl font-semibold">Engineering Excellence</h2>
+                <h2 class="ml-4 font-display text-2xl sm:text-3xl font-semibold">Engineering Excellence</h2>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
                 <a href="services/web-development.html" class="service-card group bg-white border border-slate-200 p-6 rounded-3xl">
                     <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-blue-100 text-blue-600 mb-4"><i class="fas fa-globe text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition-colors">Web Development</h3>
+                    <h3 class="font-semibold text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">Web Development</h3>
                     <p class="text-sm text-slate-600">Enterprise-grade web solutions built for scale.</p>
                     <div class="mt-4 flex items-center text-xs font-semibold text-blue-600 group-hover:gap-x-2 transition-all">
                         <span>Explore</span> <i class="fas fa-arrow-right ml-1.5"></i>
@@ -335,7 +356,7 @@
                 
                 <a href="services/cloud-solutions.html" class="service-card group bg-white border border-slate-200 p-6 rounded-3xl">
                     <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-sky-100 text-sky-600 mb-4"><i class="fas fa-cloud text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition-colors">Cloud &amp; DevOps</h3>
+                    <h3 class="font-semibold text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">Cloud &amp; DevOps</h3>
                     <p class="text-sm text-slate-600">Scale infinitely with cloud-native architecture.</p>
                     <div class="mt-4 flex items-center text-xs font-semibold text-blue-600 group-hover:gap-x-2 transition-all">
                         <span>Explore</span> <i class="fas fa-arrow-right ml-1.5"></i>
@@ -344,7 +365,7 @@
                 
                 <a href="services/mobile-development.html" class="service-card group bg-white border border-slate-200 p-6 rounded-3xl">
                     <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-violet-100 text-violet-600 mb-4"><i class="fas fa-mobile-alt text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition-colors">Mobile Apps</h3>
+                    <h3 class="font-semibold text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">Mobile Apps</h3>
                     <p class="text-sm text-slate-600">Native experiences on every device.</p>
                     <div class="mt-4 flex items-center text-xs font-semibold text-blue-600 group-hover:gap-x-2 transition-all">
                         <span>Explore</span> <i class="fas fa-arrow-right ml-1.5"></i>
@@ -353,7 +374,7 @@
                 
                 <a href="services/ui-ux-design.html" class="service-card group bg-white border border-slate-200 p-6 rounded-3xl">
                     <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-pink-100 text-pink-600 mb-4"><i class="fas fa-palette text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition-colors">UI/UX Design</h3>
+                    <h3 class="font-semibold text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">UI/UX Design</h3>
                     <p class="text-sm text-slate-600">Design that delights and converts.</p>
                     <div class="mt-4 flex items-center text-xs font-semibold text-blue-600 group-hover:gap-x-2 transition-all">
                         <span>Explore</span> <i class="fas fa-arrow-right ml-1.5"></i>
@@ -362,7 +383,7 @@
                 
                 <a href="services/ecommerce.html" class="service-card group bg-white border border-slate-200 p-6 rounded-3xl">
                     <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-emerald-100 text-emerald-600 mb-4"><i class="fas fa-shopping-cart text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition-colors">E-Commerce</h3>
+                    <h3 class="font-semibold text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">E-Commerce</h3>
                     <p class="text-sm text-slate-600">Commerce platforms that convert.</p>
                     <div class="mt-4 flex items-center text-xs font-semibold text-blue-600 group-hover:gap-x-2 transition-all">
                         <span>Explore</span> <i class="fas fa-arrow-right ml-1.5"></i>
@@ -370,7 +391,7 @@
                 </a>
                 <a href="services/erp-solutions.html" class="service-card group bg-white border border-slate-200 p-6 rounded-3xl">
                     <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-emerald-100 text-emerald-600 mb-4"><i class="fas fa-cogs text-2xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition-colors">ERP Solutions</h3>
+                    <h3 class="font-semibold text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">ERP Solutions</h3>
                     <p class="text-sm text-slate-600">Unified enterprise systems for operations, finance &amp; HR.</p>
                     <div class="mt-4 flex items-center text-xs font-semibold text-blue-600 group-hover:gap-x-2 transition-all">
                         <span>Explore</span> <i class="fas fa-arrow-right ml-1.5"></i>

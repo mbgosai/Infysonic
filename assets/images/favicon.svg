@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#04a1e8"/>
+      <stop offset="50%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#00d4ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circular background -->
+  <circle cx="50" cy="50" r="48" fill="url(#grad)"/>
+  <circle cx="50" cy="50" r="36" fill="#ffffff"/>
+
+  <!-- Minimal wave / infinity mark from the main logo -->
+  <path d="M22 38 Q38 27 54 38 Q70 49 54 60 Q38 71 22 60 Q6 49 22 38" 
+        fill="none" 
+        stroke="#04a1e8" 
+        stroke-width="8" 
+        stroke-linecap="round"/>
+
+  <!-- Small audio signal bars (simplified from logo) -->
+  <rect x="62" y="38" width="4" height="12" rx="1.5" fill="#04a1e8"/>
+  <rect x="68" y="33" width="4" height="22" rx="1.5" fill="#0ea5e9"/>
+  <rect x="74" y="40" width="4" height="8" rx="1.5" fill="#04a1e8"/>
+
+  <!-- Center dot -->
+  <circle cx="50" cy="50" r="5" fill="#0f172a"/>
+</svg>
