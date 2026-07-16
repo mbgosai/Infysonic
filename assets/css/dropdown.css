@@ -14,14 +14,15 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 520px;
+  max-width: 520px;
+  width: max-content;
   background: #fff;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   z-index: 99999;
   padding: 14px 12px;
-  margin-top: 0 !important;   /* ← ZERO gap — this fixes "way below" */
+  margin-top: 0 !important;
   overflow: visible;
 }
 
@@ -82,17 +83,25 @@
   font-size: 0.95rem;
 }
 
-/* Mobile dropdown sizing */
-@media (max-width: 767px) {
+/* Mobile & Tablet dropdown sizing */
+@media (max-width: 1023px) {
   .dropdown-menu {
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 8px;
   }
   .dropdown-menu .dropdown-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .dropdown-menu {
+    max-width: 300px;
+    padding: 10px 8px;
   }
 }
 

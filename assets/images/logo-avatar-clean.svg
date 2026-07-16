@@ -1,0 +1,18 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#04a1e8"/>
+      <stop offset="45%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#00d4ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Clean gradient circle -->
+  <circle cx="100" cy="100" r="98" fill="url(#grad)"/>
+  
+  <!-- White center -->
+  <circle cx="100" cy="100" r="76" fill="#ffffff"/>
+  
+  <!-- Centered logo -->
+  <image href="logo.png" x="36" y="52" width="128" height="96"/>
+</svg>

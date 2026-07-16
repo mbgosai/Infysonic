@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://infysonic.com/">
     <title>Infysonic | Enterprise IT &amp; AI Solutions</title>
     <meta name="description" content="Infysonic delivers enterprise AI solutions, software development, cloud services and ERP systems. Trusted by 150+ companies worldwide.">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -44,10 +45,22 @@
         }
 
         .section-header {
-            font-size: 2.25rem;
-            line-height: 2.5rem;
+            font-size: 1.875rem;
+            line-height: 2.25rem;
             font-weight: 700;
             letter-spacing: -.025em;
+        }
+        @media (min-width: 640px) {
+            .section-header {
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+            }
+        }
+        @media (min-width: 768px) {
+            .section-header {
+                font-size: 2.5rem;
+                line-height: 2.75rem;
+            }
         }
 
         .stat-card {
@@ -99,15 +112,22 @@
         .tech-item {
             display: inline-flex;
             align-items: center;
-            padding: 0.75rem 1.5rem;
-            margin-right: 1.25rem;
+            padding: 0.4rem 0.7rem;
+            margin-right: 0.5rem;
             background: white;
             border: 1px solid #e2e8f0;
             border-radius: 9999px;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
             transition: all 0.3s ease;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.7rem;
+        }
+        @media (min-width: 768px) {
+            .tech-item {
+                padding: 0.75rem 1.5rem;
+                margin-right: 1.25rem;
+                font-size: 0.95rem;
+            }
         }
         
         .tech-item:hover {
@@ -177,6 +197,24 @@
             color: #3b82f6;
         }</style>
   <link rel="stylesheet" href="assets/css/dropdown.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Infysonic",
+  "url": "https://infysonic.com",
+  "logo": "https://infysonic.com/assets/images/logo.png",
+  "description": "Infysonic delivers enterprise AI solutions, software development, cloud services and ERP systems.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Medway",
+    "addressRegion": "Massachusetts",
+    "addressCountry": "US"
+  }
+}
+    </script>
 </head>
 <body class="bg-slate-50 text-slate-800">
     <!-- Navbar -->
@@ -225,22 +263,22 @@
                     <a href="contact.html" class="nav-link font-medium text-slate-700">Contact</a>
                 </div>
                 
-                <div class="flex items-center gap-x-3">
+                <div class="flex items-center gap-x-2 sm:gap-x-3">
                     <a href="contact.html" 
-                       class="hidden sm:flex items-center px-5 py-2.5 text-sm font-semibold rounded-2xl border border-slate-300 hover:bg-slate-100 transition-colors">
+                       class="hidden sm:flex items-center px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold rounded-2xl border border-slate-300 hover:bg-slate-100 transition-colors">
                         <span>Get in touch</span>
                     </a>
                     
                     <a href="contact.html" 
-                       class="px-6 py-2.5 text-sm font-semibold bg-slate-900 text-white rounded-2xl flex items-center gap-x-2 hover:bg-slate-800 transition-all shadow-sm">
+                       class="px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold bg-slate-900 text-white rounded-2xl flex items-center gap-x-1.5 sm:gap-x-2 hover:bg-slate-800 transition-all shadow-sm">
                         <span>Start Project</span>
                         <i class="fas fa-arrow-right text-xs"></i>
                     </a>
                     
                     <div class="md:hidden">
                         <button id="mobile-menu-btn"
-                                class="w-10 h-10 flex items-center justify-center text-slate-600 hover:bg-slate-100 rounded-2xl transition-colors">
-                            <i class="fas fa-bars text-xl"></i>
+                                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-slate-600 hover:bg-slate-100 rounded-2xl transition-colors">
+                            <i class="fas fa-bars text-lg sm:text-xl"></i>
                         </button>
                     </div>
                 </div>
@@ -284,12 +322,12 @@
     <header class="bg-gradient-to-b from-[#f0f8ff] via-[#f8fafc] to-[#F8FAFC] pt-16 pb-24 relative overflow-hidden">
         <div class="max-w-screen-xl mx-auto px-8">
             <div class="max-w-3xl mx-auto text-center relative z-10">
-                <h1 class="text-5xl md:text-[56px] font-display font-semibold tracking-tighter leading-[1.05] text-slate-900 mb-5">
-                    Your Technology Partner For Innovative<br>Digital Solutions
+                <h1 class="text-3xl sm:text-5xl md:text-[56px] font-display font-semibold tracking-tighter leading-[1.05] text-slate-900 mb-5 break-words">
+                    Engineering Intelligence.<br class="hidden sm:block">Empowering Tomorrow.
                 </h1>
                 
-                <p class="max-w-lg mx-auto text-lg text-slate-600 mb-8">
-                    We help you to expand your business &amp; grow your business by leveraging the latest technologies.
+                <p class="max-w-lg mx-auto text-lg mb-8">
+                    We build AI-powered software, intelligent automation, cloud platforms, and enterprise solutions that help businesses innovate, scale, and stay ahead.
                 </p>
                 
                 <div class="flex justify-center">
@@ -304,14 +342,14 @@
         <!-- Floating images on the sides (matching reference style: clean professional photos) -->
         <div class="absolute inset-0 pointer-events-none hidden xl:block">
             <!-- Left side floating photos -->
-            <img src="assets/images/hero/team-collaborate.jpg" class="absolute top-[6%] left-[1%] w-[162px] h-[118px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Professional team collaboration">
-            <img src="assets/images/hero/woman-glasses.jpg" class="absolute top-[28%] left-[7%] w-[128px] h-[108px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Business professional">
-            <img src="assets/images/hero/collaborate-desk.jpg" class="absolute top-[52%] left-[2%] w-[115px] h-[138px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Office collaboration">
+            <img src="assets/images/hero/team-collaborate.jpg" class="absolute top-[6%] left-[1%] w-[120px] lg:w-[162px] h-[88px] lg:h-[118px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Professional team collaboration">
+            <img src="assets/images/hero/woman-glasses.jpg" class="absolute top-[28%] left-[7%] w-[96px] lg:w-[128px] h-[81px] lg:h-[108px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Business professional">
+            <img src="assets/images/hero/collaborate-desk.jpg" class="absolute top-[52%] left-[2%] w-[86px] lg:w-[115px] h-[103px] lg:h-[138px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Office collaboration">
 
             <!-- Right side floating photos -->
-            <img src="assets/images/hero/team-laptop.jpg" class="absolute top-[7%] right-[2%] w-[155px] h-[118px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Team working on laptop">
-            <img src="assets/images/hero/business-man.jpg" class="absolute top-[30%] right-[8%] w-[128px] h-[145px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Business professional">
-            <img src="assets/images/hero/woman-tablet.jpg" class="absolute top-[55%] right-[1%] w-[135px] h-[105px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Woman with tablet">
+            <img src="assets/images/hero/team-laptop.jpg" class="absolute top-[7%] right-[2%] w-[116px] lg:w-[155px] h-[88px] lg:h-[118px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Team working on laptop">
+            <img src="assets/images/hero/business-man.jpg" class="absolute top-[30%] right-[8%] w-[96px] lg:w-[128px] h-[109px] lg:h-[145px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Business professional">
+            <img src="assets/images/hero/woman-tablet.jpg" class="absolute top-[55%] right-[1%] w-[101px] lg:w-[135px] h-[79px] lg:h-[105px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Woman with tablet">
         </div>
     </header>
 
@@ -323,7 +361,7 @@
                     <i class="fas fa-calendar-alt text-xl"></i>
                 </div>
                 <div>
-                    <div class="font-display text-4xl font-semibold metric-value">12+</div>
+                    <div class="font-display text-3xl sm:text-4xl font-semibold metric-value">12+</div>
                     <div class="text-sm text-slate-500 font-medium">Years Experience</div>
                 </div>
             </div>
@@ -332,7 +370,7 @@
                     <i class="fas fa-rocket text-xl"></i>
                 </div>
                 <div>
-                    <div class="font-display text-4xl font-semibold metric-value">80+</div>
+                    <div class="font-display text-3xl sm:text-4xl font-semibold metric-value">80+</div>
                     <div class="text-sm text-slate-500 font-medium">Projects Delivered</div>
                 </div>
             </div>
@@ -341,7 +379,7 @@
                     <i class="fas fa-smile text-xl"></i>
                 </div>
                 <div>
-                    <div class="font-display text-4xl font-semibold metric-value">99%</div>
+                    <div class="font-display text-3xl sm:text-4xl font-semibold metric-value">99%</div>
                     <div class="text-sm text-slate-500 font-medium">Client Satisfaction</div>
                 </div>
             </div>
@@ -350,7 +388,7 @@
                     <i class="fas fa-headset text-xl"></i>
                 </div>
                 <div>
-                    <div class="font-display text-4xl font-semibold metric-value">24/7</div>
+                    <div class="font-display text-3xl sm:text-4xl font-semibold metric-value">24/7</div>
                     <div class="text-sm text-slate-500 font-medium">Support Available</div>
                 </div>
             </div>
@@ -577,11 +615,11 @@
     <!-- Why Choose Us -->
     <div id="why-us" class="max-w-screen-xl mx-auto px-8 pt-5 pb-16">
         <div class="text-center mb-10">
-            <h2 class="section-header">Why Choose Infysonic</h2>
-            <p class="text-lg text-slate-600 mt-2 max-w-md mx-auto">We don't just build software; we build the foundation for your digital success.</p>
+            <h2 class="section-header text-3xl sm:text-4xl">Why Choose Infysonic</h2>
+            <p class="text-lg text-slate-600 mt-2 max-w-md mx-auto break-words">We don't just build software; we build the foundation for your digital success.</p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             <div class="modern-card bg-white border border-slate-100 p-6 rounded-3xl">
                 <div class="flex items-center gap-4 mb-4">
                     <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center flex-shrink-0">
@@ -762,7 +800,7 @@
     <!-- Footer -->
     <footer class="bg-white border-t border-slate-100 py-12">
   <div class="max-w-screen-xl mx-auto px-8">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-10">
+    <div class="grid grid-cols-1 sm:grid-cols-12 gap-x-8 gap-y-10">
       
       <!-- Logo + Tagline -->
       <div class="md:col-span-4">
