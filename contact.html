@@ -79,10 +79,11 @@
     <!-- Navbar -->
     <nav id="navbar" class="bg-white border-b border-slate-100 sticky top-0 z-50">
         <div class="max-w-screen-xl mx-auto">
-            <div class="px-8 py-5 flex items-center justify-between">
-                <div class="flex items-center gap-x-3">
-                    <a href="index.html" class="logo-container flex items-center gap-x-2">
-                        <img src="assets/images/logo.png" alt="Infysonic" class="h-12 w-auto" style="max-height:48px; display:block; object-fit:contain;"><span class="font-display text-3xl font-semibold tracking-tighter bg-gradient-to-r from-[#04a1e8] via-[#0ea5e9] to-[#00d4ff] bg-clip-text text-transparent">Infysonic</span>
+            <div class="px-1.5 py-1.5 flex items-center justify-between gap-x-1">
+                <div class="flex items-center gap-x-1 flex-1 min-w-0" style="max-width: 58%;">
+                    <a href="index.html" class="logo-container flex items-center gap-x-1 min-w-0">
+                        <img src="assets/images/logo.png" alt="Infysonic" class="h-9 w-auto" style="max-height:36px; display:block; object-fit:contain;">
+          <span class="font-display text-2xl sm:text-3xl font-semibold tracking-tighter bg-gradient-to-r from-[#04a1e8] via-[#0ea5e9] to-[#00d4ff] bg-clip-text text-transparent">Infysonic</span>
                     </a>
                 </div>
                 
@@ -121,22 +122,22 @@
                     <a href="contact.html" class="nav-link font-medium text-slate-700">Contact</a>
                 </div>
                 
-                <div class="flex items-center gap-x-3">
+                <div class="flex items-center gap-x-1 flex-1 min-w-0" style="max-width: 58%;">
                     <a href="contact.html" 
-                       class="hidden sm:flex items-center px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold rounded-2xl border border-slate-300 hover:bg-slate-100 transition-colors">
+                       class="hidden sm:flex items-center px-2 sm:px-3 py-1 text-[10px] sm:text-xs font-semibold rounded-2xl border border-slate-300 hover:bg-slate-100 transition-colors whitespace-nowrap">
                         <span>Get in touch</span>
                     </a>
                     
                     <a href="contact.html" 
-                       class="px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold bg-slate-900 text-white rounded-2xl flex items-center gap-x-1.5 sm:gap-x-2 hover:bg-slate-800 transition-all shadow-sm">
+                       class="px-2.5 sm:px-3 py-1 text-[10px] sm:text-xs font-semibold bg-slate-900 text-white rounded-2xl flex items-center gap-x-0.5 hover:bg-slate-800 transition-all shadow-sm whitespace-nowrap">
                         <span>Start Project</span>
-                        <i class="fas fa-arrow-right text-xs"></i>
+                        <i class="fas fa-arrow-right text-[7px] sm:text-[9px]"></i>
                     </a>
                     
                     <div class="md:hidden">
                         <button id="mobile-menu-btn"
-                                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-slate-600 hover:bg-slate-100 rounded-2xl transition-colors">
-                            <i class="fas fa-bars text-xl"></i>
+                                class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center text-slate-600 hover:bg-slate-100 rounded-2xl transition-colors">
+                            <i class="fas fa-bars text-xs sm:text-base"></i>
                         </button>
                     </div>
                 </div>
@@ -192,6 +193,19 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+        <!-- Floating images on the sides (matching index.html) -->
+        <div class="absolute inset-0 pointer-events-none hidden xl:block">
+            <!-- Left side floating photos -->
+            <img src="assets/images/hero/team-collaborate.jpg" class="absolute top-[6%] left-[1%] w-[120px] lg:w-[162px] h-[88px] lg:h-[118px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Professional team collaboration">
+            <img src="assets/images/hero/woman-glasses.jpg" class="absolute top-[28%] left-[7%] w-[96px] lg:w-[128px] h-[81px] lg:h-[108px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Business professional">
+            <img src="assets/images/hero/collaborate-desk.jpg" class="absolute top-[52%] left-[2%] w-[86px] lg:w-[115px] h-[103px] lg:h-[138px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Office collaboration">
+
+            <!-- Right side floating photos -->
+            <img src="assets/images/hero/team-laptop.jpg" class="absolute top-[7%] right-[2%] w-[116px] lg:w-[155px] h-[88px] lg:h-[118px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Team working on laptop">
+            <img src="assets/images/hero/business-man.jpg" class="absolute top-[30%] right-[8%] w-[96px] lg:w-[128px] h-[109px] lg:h-[145px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Business professional">
+            <img src="assets/images/hero/woman-tablet.jpg" class="absolute top-[55%] right-[1%] w-[101px] lg:w-[135px] h-[79px] lg:h-[105px] rounded-3xl shadow-2xl object-cover border-[6px] border-white" alt="Woman with tablet">
         </div>
     </header>
 
@@ -287,9 +301,8 @@
                     </div>
                     
                     <div class="space-y-1 text-sm">
-                        <div class="flex justify-between"><span>Monday - Friday</span> <span class="font-semibold">8:00am - 7:00pm EST</span></div>
-                        <div class="flex justify-between"><span>Saturday</span> <span>9:00am - 2:00pm EST</span></div>
-                        <div class="flex justify-between text-xs text-slate-500"><span>Sunday</span> <span>Closed</span></div>
+                        <div class="flex justify-between"><span>Monday - Friday</span> <span class="font-semibold">9:00am - 6:00pm EST</span></div>
+                        <div class="flex justify-between"><span>Saturday - Sunday</span> <span class="font-semibold">Holiday</span></div>
                     </div>
                     
 
@@ -306,8 +319,9 @@
       <!-- Logo + Tagline -->
       <div class="md:col-span-4">
         <div class="flex items-center gap-x-2 mb-4">
+          
           <img src="assets/images/logo.png" alt="Infysonic" class="h-9 w-auto" style="max-height:36px; display:block; object-fit:contain;">
-          <span class="font-display text-2xl font-bold tracking-[-1px] bg-gradient-to-r from-[#04a1e8] via-[#0ea5e9] to-[#00d4ff] bg-clip-text text-transparent">INFYSONIC</span>
+          <span class="font-display text-2xl sm:text-3xl font-semibold tracking-tighter bg-gradient-to-r from-[#04a1e8] via-[#0ea5e9] to-[#00d4ff] bg-clip-text text-transparent">Infysonic</span>
         </div>
         <p class="text-slate-500 text-sm leading-relaxed max-w-[260px]">
           Empowering the next generation of industry leaders with modern, scalable, and cost-effective digital solutions.
